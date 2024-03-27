@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.css';
 import './home.css';
 
 function Home() {
@@ -63,7 +64,7 @@ function Home() {
                             </div>
                             <div className="div1">
                                 <div>
-                                    <p><i className="fas fa-wallet" style={{ color: "orange" }}></i> Current Balance: <span><i className="fas fa-dollar-sign"></i>{userData.currentBalance}</span></p>
+                                    <p><i className="fas fa-wallet" style={{ color: "orange" }}></i> Current Balance: <span>{userData.currentBalance}</span></p>
                                     <p><i className="fas fa-coins" style={{ color: "orange" }}></i> Amount Due: Ksh <span><i className="fas fa-money-bill-alt"></i>{userData.Amount}</span></p>
                                 </div>
                                 <div>
@@ -74,7 +75,7 @@ function Home() {
                                 <p>Current Package</p>
                                 <div className="net">
                                     <div>
-                                        <p className="span"><span><i className="fas fa-signal"></i>{userData.networkSpeed}</span></p>
+                                        <p className="span"><span>{userData.networkSpeed}</span></p>
                                         <p>Network Speed</p>
                                     </div>
                                     <div className="line"></div>
@@ -87,7 +88,7 @@ function Home() {
                             <div className="div3">
                                 <div>
                                     <p><i className="fa-solid fa-signal" style={{ color: "#dcedf9" }}></i> Signal Strength </p>
-                                    <p className="dbm"><i className="fas fa-signal"></i>{userData.signalStrength}</p>
+                                    <p className="dbm">{userData.signalStrength}dbm</p>
                                 </div>
                             </div>
                             <div className="net">
